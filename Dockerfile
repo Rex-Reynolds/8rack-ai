@@ -1,8 +1,11 @@
 FROM python:3.14-slim
 
-# Install ttyd
+# Install ttyd from GitHub release (not in Debian repos)
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ttyd && \
+    apt-get install -y --no-install-recommends wget && \
+    wget -qO /usr/local/bin/ttyd https://github.com/tsl0922/ttyd/releases/latest/download/ttyd.x86_64 && \
+    chmod +x /usr/local/bin/ttyd && \
+    apt-get purge -y wget && apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
 # Install uv
