@@ -18,7 +18,7 @@ class Agent(Protocol):
         """Choose an action from the legal options."""
         ...
 
-    def choose_mulligan(self, hand: list[str], mulligans: int) -> bool:
+    def choose_mulligan(self, hand: list[CardInstance], mulligans: int) -> bool:
         """Return True to mulligan, False to keep."""
         ...
 

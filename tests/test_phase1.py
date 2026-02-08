@@ -14,6 +14,14 @@ from eight_rack.agents.pilot import DeterministicPilot, GoldfishOpponent
 
 # --- Fixtures ---
 
+class _MockCard:
+    """Minimal card-like object for mulligan tests (just needs .name)."""
+    def __init__(self, name: str):
+        self.name = name
+
+def _mock_hand(names: list[str]) -> list:
+    return [_MockCard(n) for n in names]
+
 def make_card(name: str, **kwargs) -> CardDefinition:
     """Helper to create card definitions for testing."""
     defaults = {
@@ -275,12 +283,12 @@ class TestResolver:
 class TestAgents:
     def test_pilot_mulligan_keeps_good_hand(self):
         pilot = DeterministicPilot()
-        hand = ["Swamp", "Swamp", "Thoughtseize", "The Rack", "Raven's Crime", "Swamp", "Liliana of the Veil"]
+        hand = _mock_hand(["Swamp", "Swamp", "Thoughtseize", "The Rack", "Raven's Crime", "Swamp", "Liliana of the Veil"])
         assert not pilot.choose_mulligan(hand, 0)
 
     def test_pilot_mulligan_rejects_no_lands(self):
         pilot = DeterministicPilot()
-        hand = ["Thoughtseize", "The Rack", "Raven's Crime", "Fatal Push", "Smallpox", "Wrench Mind", "Liliana of the Veil"]
+        hand = _mock_hand(["Thoughtseize", "The Rack", "Raven's Crime", "Fatal Push", "Smallpox", "Wrench Mind", "Liliana of the Veil"])
         assert pilot.choose_mulligan(hand, 0)
 
     def test_pilot_plays_land_first(self):
@@ -297,4 +305,4 @@ class TestAgents:
 
     def test_goldfish_always_keeps(self):
         goldfish = GoldfishOpponent()
-        assert not goldfish.choose_mulligan(["Swamp"] * 7, 0)
+        assert not goldfish.choose_mulligan(_mock_hand(["Swamp"] * 7), 0)

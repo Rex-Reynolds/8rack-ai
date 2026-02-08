@@ -90,12 +90,13 @@ class DeterministicPilot:
     ) -> list[str]:
         return _heuristic_cards_to_bottom(hand, count)
 
-    def choose_mulligan(self, hand: list[str], mulligans: int) -> bool:
+    def choose_mulligan(self, hand: list[CardInstance], mulligans: int) -> bool:
         if mulligans >= 2:
             return False
-        lands = sum(1 for c in hand if _is_land(c))
-        discard_spells = sum(1 for c in hand if _is_discard(c))
-        racks = sum(1 for c in hand if c in ("The Rack", "Shrieking Affliction"))
+        names = [c.name for c in hand]
+        lands = sum(1 for c in names if _is_land(c))
+        discard_spells = sum(1 for c in names if _is_discard(c))
+        racks = sum(1 for c in names if c in ("The Rack", "Shrieking Affliction"))
         if lands < 1 or lands > 5:
             return True
         if discard_spells == 0 and racks == 0:
@@ -161,14 +162,15 @@ class HybridPilot:
     ) -> list[str]:
         return _heuristic_cards_to_bottom(hand, count)
 
-    def choose_mulligan(self, hand: list[str], mulligans: int) -> bool:
+    def choose_mulligan(self, hand: list[CardInstance], mulligans: int) -> bool:
         """Use heuristics for clear keeps/mulls, LLM for borderline hands."""
         if mulligans >= 2:
             return False
 
-        lands = sum(1 for c in hand if _is_land(c))
-        discard_spells = sum(1 for c in hand if _is_discard(c))
-        racks = sum(1 for c in hand if c in ("The Rack", "Shrieking Affliction"))
+        names = [c.name for c in hand]
+        lands = sum(1 for c in names if _is_land(c))
+        discard_spells = sum(1 for c in names if _is_discard(c))
+        racks = sum(1 for c in names if c in ("The Rack", "Shrieking Affliction"))
 
         # Clear keeps
         if 2 <= lands <= 3 and discard_spells >= 1 and racks >= 1:
@@ -180,7 +182,7 @@ class HybridPilot:
             return True
 
         # Borderline - ask LLM
-        return self._llm_mulligan(hand, mulligans)
+        return self._llm_mulligan([c.name for c in hand], mulligans)
 
     def choose_action(self, state: GameState, legal_actions: list[Action]) -> Action:
         """Heuristic fast path for simple decisions, LLM for complex ones."""
@@ -358,7 +360,7 @@ class GoldfishOpponent:
     def name(self) -> str:
         return "Goldfish"
 
-    def choose_mulligan(self, hand: list[str], mulligans: int) -> bool:
+    def choose_mulligan(self, hand: list[CardInstance], mulligans: int) -> bool:
         return False
 
     def choose_cards_to_bottom(

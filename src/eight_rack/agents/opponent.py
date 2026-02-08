@@ -58,14 +58,15 @@ class LLMOpponent:
                 )
         return self._system_prompt
 
-    def choose_mulligan(self, hand: list[str], mulligans: int) -> bool:
+    def choose_mulligan(self, hand: list, mulligans: int) -> bool:
         """Simple mulligan: keep if we have 2-5 lands and some spells."""
         if mulligans >= 2:
             return False
-        lands = sum(1 for c in hand if _looks_like_land(c))
+        names = [c.name if hasattr(c, 'name') else c for c in hand]
+        lands = sum(1 for c in names if _looks_like_land(c))
         if lands < 1 or lands > 5:
             return True
-        spells = len(hand) - lands
+        spells = len(names) - lands
         if spells == 0:
             return True
         return False
@@ -188,10 +189,11 @@ class ScriptedOpponent:
     def name(self) -> str:
         return f"{self.archetype} (Scripted)"
 
-    def choose_mulligan(self, hand: list[str], mulligans: int) -> bool:
+    def choose_mulligan(self, hand: list, mulligans: int) -> bool:
         if mulligans >= 2:
             return False
-        lands = sum(1 for c in hand if _looks_like_land(c))
+        names = [c.name if hasattr(c, 'name') else c for c in hand]
+        lands = sum(1 for c in names if _looks_like_land(c))
         return lands < 1 or lands > 5
 
     def choose_cards_to_bottom(

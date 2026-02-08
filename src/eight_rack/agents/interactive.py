@@ -49,14 +49,26 @@ class InteractivePilot:
     def name(self) -> str:
         return "8 Rack Pilot (You)"
 
-    def choose_mulligan(self, hand: list[str], mulligans: int) -> bool:
+    def choose_mulligan(self, hand: list[CardInstance], mulligans: int) -> bool:
         console.print()
         console.print(f"[bold]Opening hand ({7 - mulligans} cards):[/bold]")
-        for i, name in enumerate(hand):
-            console.print(f"  {i + 1}. {name}")
+        for i, card in enumerate(hand):
+            _print_card_summary(i + 1, card)
         console.print()
-        choice = _prompt("[bold]Keep or Mulligan?[/bold] (k/m): ", valid={"k", "m"})
-        return choice == "m"
+        console.print(f"  [dim]Type a number (1-{len(hand)}) to inspect a card[/dim]")
+        while True:
+            choice = _prompt("[bold]Keep or Mulligan?[/bold] (k/m): ", valid=None)
+            if choice in ("k", "m"):
+                return choice == "m"
+            # Try as card number to inspect
+            try:
+                idx = int(choice)
+                if 1 <= idx <= len(hand):
+                    _print_card_detail(hand[idx - 1])
+                    continue
+            except ValueError:
+                pass
+            console.print(f"  [red]Enter k, m, or a card number (1-{len(hand)})[/red]")
 
     def choose_cards_to_bottom(
         self, hand: list[CardInstance], count: int
@@ -64,7 +76,7 @@ class InteractivePilot:
         console.print()
         console.print(f"[bold]Choose {count} card(s) to put on bottom:[/bold]")
         for i, card in enumerate(hand):
-            console.print(f"  {i}. {card.name}")
+            _print_card_summary(i, card)
         chosen: list[str] = []
         while len(chosen) < count:
             remaining = count - len(chosen)
@@ -137,8 +149,20 @@ class InteractivePilot:
         _display_grouped_actions(legal_actions)
 
         console.print()
-        idx = _prompt_int(f"  Choose action (0-{len(legal_actions) - 1}): ", 0, len(legal_actions) - 1)
-        return legal_actions[idx]
+        console.print(f"  [dim]Type ? to inspect your hand[/dim]")
+        while True:
+            raw = _prompt_raw(f"  Choose action (0-{len(legal_actions) - 1}): ")
+            if raw == "?":
+                player = state.get_player(legal_actions[0].player_id)
+                _print_hand_details(player.hand)
+                continue
+            try:
+                idx = int(raw)
+                if 0 <= idx <= len(legal_actions) - 1:
+                    return legal_actions[idx]
+                console.print(f"  [red]Choose a number between 0 and {len(legal_actions) - 1}.[/red]")
+            except ValueError:
+                console.print(f"  [red]Enter a number or ? to inspect hand.[/red]")
 
     def choose_search_target(
         self, state: GameState, candidates: list[CardInstance]
@@ -287,6 +311,69 @@ def _action_tag(action: Action) -> str:
             return "[magenta][DISCARD][/magenta] "
         case _:
             return ""
+
+
+def _print_card_summary(index: int, card: CardInstance) -> None:
+    """Print a one-line card summary with mana cost and type."""
+    d = card.definition
+    parts = [f"  [bold]{index}[/bold]. {card.name}"]
+    if d.mana_cost:
+        parts.append(f"[cyan]{d.mana_cost}[/cyan]")
+    # Compact type
+    if d.is_creature:
+        parts.append(f"[dim]{d.power}/{d.toughness}[/dim]")
+    elif d.is_planeswalker:
+        parts.append(f"[dim]Loyalty {d.loyalty}[/dim]")
+    elif d.is_land:
+        parts.append("[yellow]Land[/yellow]")
+    elif d.is_instant:
+        parts.append("[dim]Instant[/dim]")
+    elif d.is_sorcery:
+        parts.append("[dim]Sorcery[/dim]")
+    elif d.is_enchantment:
+        parts.append("[dim]Enchantment[/dim]")
+    elif d.is_artifact:
+        parts.append("[dim]Artifact[/dim]")
+    console.print("  ".join(parts))
+
+
+def _print_card_detail(card: CardInstance) -> None:
+    """Print full card details including oracle text."""
+    d = card.definition
+    console.print()
+    console.print(f"  [bold]╔══ {card.name} ══╗[/bold]")
+    if d.mana_cost:
+        console.print(f"  [cyan]  Mana: {d.mana_cost} (CMC {int(d.cmc)})[/cyan]")
+    console.print(f"  [dim]  Type: {d.type_line}[/dim]")
+    if d.oracle_text:
+        for line in d.oracle_text.split("\n"):
+            console.print(f"    {line}")
+    if d.is_creature:
+        console.print(f"  [bold]  P/T: {d.power}/{d.toughness}[/bold]")
+    if d.is_planeswalker:
+        console.print(f"  [bold]  Loyalty: {d.loyalty}[/bold]")
+    if d.keywords:
+        console.print(f"  [dim]  Keywords: {', '.join(d.keywords)}[/dim]")
+    console.print(f"  [bold]╚{'═' * (len(card.name) + 6)}╝[/bold]")
+    console.print()
+
+
+def _print_hand_details(hand: list[CardInstance]) -> None:
+    """Print details for all cards in hand."""
+    console.print()
+    console.print(f"  [bold]── Your Hand ({len(hand)} cards) ──[/bold]")
+    for card in hand:
+        _print_card_detail(card)
+
+
+def _prompt_raw(msg: str) -> str:
+    """Prompt user for raw input (no validation)."""
+    try:
+        console.print(msg, end="")
+        return input().strip()
+    except (EOFError, KeyboardInterrupt):
+        console.print("\n  [bold]Conceding.[/bold]")
+        sys.exit(0)
 
 
 def _prompt(msg: str, valid: set[str] | None = None) -> str:
