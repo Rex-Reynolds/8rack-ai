@@ -1,0 +1,46 @@
+name: Yawgmoth
+format: Modern
+meta_share: 0.028
+
+mainboard:
+  # Creatures (24)
+  - {quantity: 4, name: "Yawgmoth, Thran Physician"}
+  - {quantity: 4, name: "Badgermole Cub"}
+  - {quantity: 4, name: "Delighted Halfling"}
+  - {quantity: 4, name: "Young Wolf"}
+  - {quantity: 4, name: "Walking Ballista"}
+  - {quantity: 1, name: "Strangleroot Geist"}
+  - {quantity: 1, name: "Dryad Arbor"}
+  - {quantity: 1, name: "Formidable Speaker"}
+  - {quantity: 1, name: "Endurance"}
+  # Spells (12)
+  - {quantity: 4, name: "Malevolent Rumble"}
+  - {quantity: 4, name: "Dredger's Insight"}
+  - {quantity: 3, name: "Green Sun's Zenith"}
+  - {quantity: 1, name: "Grist, the Hunger Tide"}
+  # Artifacts (4)
+  - {quantity: 4, name: "Agatha's Soul Cauldron"}
+  # Lands (20)
+  - {quantity: 4, name: "Verdant Catacombs"}
+  - {quantity: 3, name: "Overgrown Tomb"}
+  - {quantity: 3, name: "Spymaster's Vault"}
+  - {quantity: 2, name: "Misty Rainforest"}
+  - {quantity: 2, name: "Boseiju, Who Endures"}
+  - {quantity: 2, name: "Forest"}
+  - {quantity: 1, name: "Wooded Foothills"}
+  - {quantity: 1, name: "Windswept Heath"}
+  - {quantity: 1, name: "Underground Mortuary"}
+  - {quantity: 1, name: "Swamp"}
+
+sideboard:
+  - {quantity: 3, name: "Fatal Push"}
+  - {quantity: 3, name: "Thoughtseize"}
+  - {quantity: 1, name: "Force of Vigor"}
+  - {quantity: 1, name: "Abrupt Decay"}
+  - {quantity: 1, name: "Murderous Cut"}
+  - {quantity: 1, name: "Ashiok, Dream Render"}
+  - {quantity: 1, name: "Outland Liberator"}
+  - {quantity: 1, name: "Scavenging Ooze"}
+  - {quantity: 1, name: "Vexing Bauble"}
+  - {quantity: 1, name: "Damping Sphere"}
+  - {quantity: 1, name: "Kraul Harpooner"}

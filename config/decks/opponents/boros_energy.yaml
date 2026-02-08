@@ -1,0 +1,42 @@
+name: Boros Energy
+format: Modern
+meta_share: 0.159
+
+mainboard:
+  # Creatures (24)
+  - {quantity: 4, name: "Guide of Souls"}
+  - {quantity: 4, name: "Ocelot Pride"}
+  - {quantity: 4, name: "Ragavan, Nimble Pilferer"}
+  - {quantity: 4, name: "Ajani, Nacatl Pariah"}
+  - {quantity: 4, name: "Phlage, Titan of Fire's Fury"}
+  - {quantity: 3, name: "Seasoned Pyromancer"}
+  - {quantity: 2, name: "Voice of Victory"}
+  # Spells (12)
+  - {quantity: 4, name: "Galvanic Discharge"}
+  - {quantity: 3, name: "Goblin Bombardment"}
+  - {quantity: 2, name: "Thraben Charm"}
+  - {quantity: 2, name: "Blood Moon"}
+  - {quantity: 1, name: "Fable of the Mirror-Breaker"}
+  # Lands (23)
+  - {quantity: 4, name: "Arid Mesa"}
+  - {quantity: 3, name: "Sacred Foundry"}
+  - {quantity: 3, name: "Flooded Strand"}
+  - {quantity: 3, name: "Marsh Flats"}
+  - {quantity: 2, name: "Elegant Parlor"}
+  - {quantity: 2, name: "Windswept Heath"}
+  - {quantity: 2, name: "Plains"}
+  - {quantity: 1, name: "Mountain"}
+  - {quantity: 1, name: "Dalkovan Encampment"}
+  - {quantity: 3, name: "Arena of Glory"}
+
+sideboard:
+  - {quantity: 2, name: "Wrath of the Skies"}
+  - {quantity: 2, name: "Celestial Purge"}
+  - {quantity: 2, name: "Wear // Tear"}
+  - {quantity: 2, name: "Obsidian Charmaw"}
+  - {quantity: 2, name: "Orim's Chant"}
+  - {quantity: 1, name: "High Noon"}
+  - {quantity: 1, name: "Surgical Extraction"}
+  - {quantity: 1, name: "Damping Sphere"}
+  - {quantity: 1, name: "Ghost Vacuum"}
+  - {quantity: 1, name: "Containment Priest"}

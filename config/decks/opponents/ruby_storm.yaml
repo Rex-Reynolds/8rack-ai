@@ -1,0 +1,42 @@
+name: Ruby Storm
+format: Modern
+meta_share: 0.088
+
+mainboard:
+  # Creatures / Planeswalkers (4)
+  - {quantity: 4, name: "Ral, Monsoon Mage"}
+  # Artifacts (4)
+  - {quantity: 4, name: "Ruby Medallion"}
+  # Spells (33)
+  - {quantity: 4, name: "Pyretic Ritual"}
+  - {quantity: 4, name: "Desperate Ritual"}
+  - {quantity: 4, name: "Manamorphose"}
+  - {quantity: 4, name: "Wrenn's Resolve"}
+  - {quantity: 4, name: "Reckless Impulse"}
+  - {quantity: 3, name: "Past in Flames"}
+  - {quantity: 2, name: "Glimpse the Impossible"}
+  - {quantity: 2, name: "Strike It Rich"}
+  - {quantity: 2, name: "Wish"}
+  - {quantity: 2, name: "Artist's Talent"}
+  - {quantity: 2, name: "Valakut Awakening"}
+  - {quantity: 1, name: "Grapeshot"}
+  # Lands (19)
+  - {quantity: 4, name: "Mountain"}
+  - {quantity: 3, name: "Arid Mesa"}
+  - {quantity: 2, name: "Scalding Tarn"}
+  - {quantity: 2, name: "Wooded Foothills"}
+  - {quantity: 2, name: "Bloodstained Mire"}
+  - {quantity: 1, name: "Sunbaked Canyon"}
+  - {quantity: 1, name: "Sacred Foundry"}
+  - {quantity: 1, name: "Elegant Parlor"}
+  - {quantity: 1, name: "Commercial District"}
+  - {quantity: 1, name: "Gemstone Caverns"}
+
+sideboard:
+  - {quantity: 4, name: "Orim's Chant"}
+  - {quantity: 4, name: "Prismatic Ending"}
+  - {quantity: 2, name: "Wear // Tear"}
+  - {quantity: 2, name: "Brotherhood's End"}
+  - {quantity: 1, name: "Past in Flames"}
+  - {quantity: 1, name: "Empty the Warrens"}
+  - {quantity: 1, name: "Grapeshot"}

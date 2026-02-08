@@ -1,0 +1,22 @@
+services:
+  8rack:
+    build: .
+    restart: unless-stopped
+    environment:
+      - TERM=xterm-256color
+    labels:
+      caddy: 8rack.${DOMAIN}
+      caddy.reverse_proxy: "{{upstreams 7681}}"
+
+  caddy:
+    image: lucaslorentz/caddy-docker-proxy:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - caddy_data:/data
+    restart: unless-stopped
+
+volumes:
+  caddy_data:

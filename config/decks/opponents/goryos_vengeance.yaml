@@ -1,0 +1,44 @@
+name: Goryo's Vengeance
+format: Modern
+meta_share: 0.028
+
+mainboard:
+  # Creatures (12)
+  - {quantity: 4, name: "Psychic Frog"}
+  - {quantity: 4, name: "Atraxa, Grand Unifier"}
+  - {quantity: 3, name: "Solitude"}
+  - {quantity: 1, name: "Griselbrand"}
+  # Spells (27)
+  - {quantity: 4, name: "Goryo's Vengeance"}
+  - {quantity: 4, name: "Ephemerate"}
+  - {quantity: 4, name: "Fallaji Archaeologist"}
+  - {quantity: 3, name: "Thoughtseize"}
+  - {quantity: 3, name: "Prismatic Ending"}
+  - {quantity: 3, name: "Emperor of Bones"}
+  - {quantity: 2, name: "Force of Negation"}
+  - {quantity: 2, name: "Tainted Indulgence"}
+  - {quantity: 1, name: "Faithful Mending"}
+  - {quantity: 1, name: "Ulamog, the Defiler"}
+  # Lands (21)
+  - {quantity: 4, name: "Polluted Delta"}
+  - {quantity: 4, name: "Flooded Strand"}
+  - {quantity: 4, name: "Marsh Flats"}
+  - {quantity: 1, name: "Hallowed Fountain"}
+  - {quantity: 1, name: "Watery Grave"}
+  - {quantity: 1, name: "Overgrown Tomb"}
+  - {quantity: 1, name: "Godless Shrine"}
+  - {quantity: 1, name: "Undercity Sewers"}
+  - {quantity: 1, name: "Meticulous Archive"}
+  - {quantity: 1, name: "Shadowy Backstreet"}
+  - {quantity: 1, name: "Island"}
+  - {quantity: 1, name: "Plains"}
+  - {quantity: 1, name: "Swamp"}
+
+sideboard:
+  - {quantity: 4, name: "Consign to Memory"}
+  - {quantity: 3, name: "Mystical Dispute"}
+  - {quantity: 3, name: "Quantum Riddler"}
+  - {quantity: 2, name: "Wrath of the Skies"}
+  - {quantity: 1, name: "Teferi, Time Raveler"}
+  - {quantity: 1, name: "Pest Control"}
+  - {quantity: 1, name: "Ghost Vacuum"}

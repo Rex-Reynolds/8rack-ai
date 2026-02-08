@@ -1,0 +1,47 @@
+name: Eldrazi Tron
+format: Modern
+meta_share: 0.067
+
+mainboard:
+  # Creatures (12)
+  - {quantity: 4, name: "Thought-Knot Seer"}
+  - {quantity: 4, name: "Devourer of Destiny"}
+  - {quantity: 3, name: "Glaring Fleshraker"}
+  - {quantity: 1, name: "Sire of Seven Deaths"}
+  - {quantity: 1, name: "Ulamog, the Ceaseless Hunger"}
+  # Planeswalkers (4)
+  - {quantity: 4, name: "Karn, the Great Creator"}
+  # Spells (6)
+  - {quantity: 4, name: "Kozilek's Command"}
+  - {quantity: 2, name: "All Is Dust"}
+  # Artifacts (9)
+  - {quantity: 4, name: "Mind Stone"}
+  - {quantity: 4, name: "Expedition Map"}
+  - {quantity: 1, name: "Chalice of the Void"}
+  # Other (2)
+  - {quantity: 2, name: "Dismember"}
+  - {quantity: 4, name: "Ugin, Eye of the Storms"}
+  # Lands (25)
+  - {quantity: 4, name: "Urza's Tower"}
+  - {quantity: 4, name: "Urza's Mine"}
+  - {quantity: 4, name: "Urza's Power Plant"}
+  - {quantity: 4, name: "Eldrazi Temple"}
+  - {quantity: 4, name: "Ugin's Labyrinth"}
+  - {quantity: 1, name: "Blast Zone"}
+  - {quantity: 1, name: "Snow-Covered Wastes"}
+
+sideboard:
+  - {quantity: 2, name: "Disruptor Flute"}
+  - {quantity: 1, name: "Engineered Explosives"}
+  - {quantity: 1, name: "Cityscape Leveler"}
+  - {quantity: 1, name: "Ensnaring Bridge"}
+  - {quantity: 1, name: "Extinguisher Battleship"}
+  - {quantity: 1, name: "Liquimetal Coating"}
+  - {quantity: 1, name: "Chalice of the Void"}
+  - {quantity: 1, name: "The Stone Brain"}
+  - {quantity: 1, name: "Tormod's Crypt"}
+  - {quantity: 1, name: "Torpor Orb"}
+  - {quantity: 1, name: "Trinisphere"}
+  - {quantity: 1, name: "Walking Ballista"}
+  - {quantity: 1, name: "Vexing Bauble"}
+  - {quantity: 1, name: "Soulless Jailer"}

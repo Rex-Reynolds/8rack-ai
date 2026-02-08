@@ -1,0 +1,44 @@
+name: Domain Zoo
+format: Modern
+meta_share: 0.049
+
+mainboard:
+  # Creatures (15)
+  - {quantity: 4, name: "Territorial Kavu"}
+  - {quantity: 4, name: "Scion of Draco"}
+  - {quantity: 4, name: "Ragavan, Nimble Pilferer"}
+  - {quantity: 4, name: "Phlage, Titan of Fire's Fury"}
+  - {quantity: 3, name: "Doorkeeper Thrull"}
+  # Planeswalkers (1)
+  - {quantity: 1, name: "Teferi, Time Raveler"}
+  # Spells (14)
+  - {quantity: 4, name: "Lightning Bolt"}
+  - {quantity: 4, name: "Leyline Binding"}
+  - {quantity: 2, name: "Stubborn Denial"}
+  - {quantity: 2, name: "Consign to Memory"}
+  # Enchantments (4)
+  - {quantity: 4, name: "Leyline of the Guildpact"}
+  # Lands (22)
+  - {quantity: 4, name: "Wooded Foothills"}
+  - {quantity: 4, name: "Arid Mesa"}
+  - {quantity: 4, name: "Flooded Strand"}
+  - {quantity: 2, name: "Steam Vents"}
+  - {quantity: 2, name: "Arena of Glory"}
+  - {quantity: 1, name: "Temple Garden"}
+  - {quantity: 1, name: "Godless Shrine"}
+  - {quantity: 1, name: "Indatha Triome"}
+  - {quantity: 1, name: "Thundering Falls"}
+  - {quantity: 1, name: "Lush Portico"}
+  - {quantity: 1, name: "Mountain"}
+  - {quantity: 1, name: "Plains"}
+
+sideboard:
+  - {quantity: 2, name: "Consign to Memory"}
+  - {quantity: 2, name: "Wear // Tear"}
+  - {quantity: 2, name: "Wrath of the Skies"}
+  - {quantity: 2, name: "Damping Sphere"}
+  - {quantity: 2, name: "Mystical Dispute"}
+  - {quantity: 2, name: "Obsidian Charmaw"}
+  - {quantity: 1, name: "Nihil Spellbomb"}
+  - {quantity: 1, name: "Surgical Extraction"}
+  - {quantity: 1, name: "High Noon"}

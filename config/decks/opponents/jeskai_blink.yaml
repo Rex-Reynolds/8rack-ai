@@ -1,0 +1,45 @@
+name: Jeskai Blink
+format: Modern
+meta_share: 0.069
+
+mainboard:
+  # Creatures (16)
+  - {quantity: 4, name: "Quantum Riddler"}
+  - {quantity: 4, name: "Solitude"}
+  - {quantity: 4, name: "Phlage, Titan of Fire's Fury"}
+  - {quantity: 4, name: "Ragavan, Nimble Pilferer"}
+  # Planeswalkers (2)
+  - {quantity: 2, name: "Teferi, Time Raveler"}
+  # Spells (18)
+  - {quantity: 4, name: "Galvanic Discharge"}
+  - {quantity: 3, name: "Consign to Memory"}
+  - {quantity: 2, name: "Ephemerate"}
+  - {quantity: 2, name: "Prismatic Ending"}
+  - {quantity: 2, name: "Fable of the Mirror-Breaker"}
+  - {quantity: 1, name: "Wrath of the Skies"}
+  # Lands (24)
+  - {quantity: 4, name: "Flooded Strand"}
+  - {quantity: 4, name: "Arid Mesa"}
+  - {quantity: 3, name: "Scalding Tarn"}
+  - {quantity: 3, name: "Arena of Glory"}
+  - {quantity: 2, name: "Plains"}
+  - {quantity: 1, name: "Hallowed Fountain"}
+  - {quantity: 1, name: "Sacred Foundry"}
+  - {quantity: 1, name: "Steam Vents"}
+  - {quantity: 1, name: "Marsh Flats"}
+  - {quantity: 1, name: "Meticulous Archive"}
+  - {quantity: 1, name: "Elegant Parlor"}
+  - {quantity: 1, name: "Thundering Falls"}
+  - {quantity: 1, name: "Mountain"}
+
+sideboard:
+  - {quantity: 3, name: "Obsidian Charmaw"}
+  - {quantity: 2, name: "Mystical Dispute"}
+  - {quantity: 2, name: "Wrath of the Skies"}
+  - {quantity: 2, name: "Damping Sphere"}
+  - {quantity: 1, name: "High Noon"}
+  - {quantity: 1, name: "Surgical Extraction"}
+  - {quantity: 1, name: "Consign to Memory"}
+  - {quantity: 1, name: "Wear // Tear"}
+  - {quantity: 1, name: "Strix Serenade"}
+  - {quantity: 1, name: "Celestial Purge"}

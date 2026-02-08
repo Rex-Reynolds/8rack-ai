@@ -1,0 +1,48 @@
+# 8 Rack - Time2TopDeck's 5-0 Modern League list
+# Source: https://www.mtggoldfish.com/deck/7019342#paper
+name: 8 Rack
+format: Modern
+
+mainboard:
+  # Discard
+  - {quantity: 3, name: "Thoughtseize"}
+  - {quantity: 3, name: "Inquisition of Kozilek"}
+  - {quantity: 4, name: "Raven's Crime"}
+  - {quantity: 1, name: "Wrench Mind"}
+  - {quantity: 2, name: "Funeral Charm"}
+  - {quantity: 4, name: "Smallpox"}
+  - {quantity: 4, name: "Liliana of the Veil"}
+
+  # Rack effects
+  - {quantity: 2, name: "The Rack"}
+  - {quantity: 2, name: "Shrieking Affliction"}
+
+  # Removal
+  - {quantity: 1, name: "Fatal Push"}
+  - {quantity: 1, name: "Bloodchief's Thirst"}
+  - {quantity: 1, name: "Sheoldred's Edict"}
+
+  # Creatures
+  - {quantity: 4, name: "Orcish Bowmasters"}
+
+  # Lands
+  - {quantity: 12, name: "Swamp"}
+  - {quantity: 3, name: "Urborg, Tomb of Yawgmoth"}
+  - {quantity: 2, name: "Urza's Saga"}
+  - {quantity: 4, name: "Mishra's Factory"}
+  - {quantity: 1, name: "Castle Locthwain"}
+
+sideboard:
+  - {quantity: 4, name: "Leyline of the Void"}
+  - {quantity: 2, name: "Nihil Spellbomb"}
+  - {quantity: 2, name: "Bontu's Last Reckoning"}
+  - {quantity: 2, name: "Damping Sphere"}
+  - {quantity: 2, name: "Break the Ice"}
+  - {quantity: 1, name: "Fatal Push"}
+  - {quantity: 1, name: "Pithing Needle"}
+  - {quantity: 1, name: "Ashiok, Dream Render"}
+  - {quantity: 1, name: "Ensnaring Bridge"}
+  - {quantity: 1, name: "The Rack"}
+  - {quantity: 1, name: "Chalice of the Void"}
+  - {quantity: 1, name: "Engineered Explosives"}
+  - {quantity: 1, name: "Liliana of the Dark Realms"}

@@ -1,0 +1,44 @@
+name: Affinity
+format: Modern
+meta_share: 0.066
+
+mainboard:
+  # Creatures (11)
+  - {quantity: 4, name: "Kappa Cannoneer"}
+  - {quantity: 4, name: "Pinnacle Emissary"}
+  - {quantity: 3, name: "Emry, Lurker of the Loch"}
+  # Artifacts (15)
+  - {quantity: 4, name: "Mox Opal"}
+  - {quantity: 4, name: "Mishra's Bauble"}
+  - {quantity: 4, name: "Tormod's Crypt"}
+  - {quantity: 2, name: "Arcbound Ravager"}
+  - {quantity: 1, name: "Lavaspur Boots"}
+  - {quantity: 1, name: "Shadowspear"}
+  - {quantity: 1, name: "Welding Jar"}
+  - {quantity: 1, name: "Aether Spellbomb"}
+  - {quantity: 1, name: "Pithing Needle"}
+  - {quantity: 1, name: "Claws of Gix"}
+  # Enchantments (4)
+  - {quantity: 4, name: "Weapons Manufacturing"}
+  # Spells (10)
+  - {quantity: 4, name: "Engineered Explosives"}
+  - {quantity: 3, name: "Sink into Stupor"}
+  - {quantity: 3, name: "Metallic Rebuke"}
+  # Lands (15)
+  - {quantity: 4, name: "Urza's Saga"}
+  - {quantity: 4, name: "Spirebluff Canal"}
+  - {quantity: 3, name: "Fiery Islet"}
+  - {quantity: 2, name: "Steam Vents"}
+  - {quantity: 1, name: "Shivan Reef"}
+  - {quantity: 1, name: "Island"}
+
+sideboard:
+  - {quantity: 2, name: "Damping Sphere"}
+  - {quantity: 2, name: "Consign to Memory"}
+  - {quantity: 2, name: "Force of Negation"}
+  - {quantity: 2, name: "Whipflare"}
+  - {quantity: 2, name: "Galvanic Blast"}
+  - {quantity: 2, name: "Harbinger of the Seas"}
+  - {quantity: 1, name: "Vexing Bauble"}
+  - {quantity: 1, name: "Mystical Dispute"}
+  - {quantity: 1, name: "Grafdigger's Cage"}

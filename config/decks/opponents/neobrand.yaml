@@ -1,0 +1,46 @@
+name: Neobrand
+format: Modern
+meta_share: 0.031
+
+mainboard:
+  # Creatures (10)
+  - {quantity: 4, name: "Allosaurus Rider"}
+  - {quantity: 2, name: "Ghalta, Stampede Tyrant"}
+  - {quantity: 2, name: "Disciple of Freyalise"}
+  - {quantity: 1, name: "Griselbrand"}
+  - {quantity: 1, name: "Atraxa, Grand Unifier"}
+  - {quantity: 1, name: "Generous Ent"}
+  - {quantity: 1, name: "Hooting Mandrills"}
+  # Spells (26)
+  - {quantity: 4, name: "Neoform"}
+  - {quantity: 4, name: "Planar Genesis"}
+  - {quantity: 4, name: "Eldritch Evolution"}
+  - {quantity: 4, name: "Summoner's Pact"}
+  - {quantity: 4, name: "Pact of Negation"}
+  - {quantity: 4, name: "Consign to Memory"}
+  - {quantity: 3, name: "Veil of Summer"}
+  - {quantity: 1, name: "Nourishing Shoal"}
+  - {quantity: 1, name: "Bridgeworks Battle"}
+  - {quantity: 1, name: "Xenagos, the Reveler"}
+  - {quantity: 1, name: "Ureni, the Song Unending"}
+  - {quantity: 1, name: "Endurance"}
+  # Lands (11)
+  - {quantity: 4, name: "Misty Rainforest"}
+  - {quantity: 3, name: "Hedge Maze"}
+  - {quantity: 1, name: "Flooded Strand"}
+  - {quantity: 1, name: "Scalding Tarn"}
+  - {quantity: 1, name: "Polluted Delta"}
+  - {quantity: 1, name: "Wooded Foothills"}
+  - {quantity: 1, name: "Breeding Pool"}
+  - {quantity: 1, name: "Boseiju, Who Endures"}
+  - {quantity: 1, name: "Snow-Covered Forest"}
+  - {quantity: 1, name: "Snow-Covered Island"}
+
+sideboard:
+  - {quantity: 4, name: "Ice-Fang Coatl"}
+  - {quantity: 3, name: "Mystical Dispute"}
+  - {quantity: 3, name: "Nature's Claim"}
+  - {quantity: 2, name: "Into the Flood Maw"}
+  - {quantity: 1, name: "Elesh Norn, Grand Cenobite"}
+  - {quantity: 1, name: "Abhorrent Oculus"}
+  - {quantity: 1, name: "Snow-Covered Forest"}
