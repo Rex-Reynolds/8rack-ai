@@ -25,10 +25,11 @@ COPY scripts/ scripts/
 # Pre-build the card database (hits Scryfall API at build time)
 RUN uv run python scripts/sync_cards.py
 
+# Entrypoint script handles auth flag
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
 EXPOSE 7681
 
-# ttyd serves the interactive game on port 7681
-# --writable allows keyboard input
-# TERM=xterm-256color ensures Rich colors work
-CMD ["ttyd", "--writable", "--port", "7681", \
-     "uv", "run", "python", "scripts/play.py"]
+# Set TTYD_CREDENTIAL=user:password to enable basic auth
+ENTRYPOINT ["/app/entrypoint.sh"]
